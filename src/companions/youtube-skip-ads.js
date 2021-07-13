@@ -35,5 +35,5 @@ companion("Youtube ad skipper", function () {
 	 */
 	setInterval(function () {
 		check_player();
-	}, 500);
+	}, 420);
 });
