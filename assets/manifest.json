@@ -1,14 +1,14 @@
 {
 	"name": "Surf Companion",
-	"version": "0.1",
+	"version": "0.0.1",
 	"manifest_version": 2,
 	"background": {
-		"scripts": ["support/hot-reload.js"]
+		"scripts": ["js/backgrounds/hot-reload.js"]
 	},
 	"content_scripts": [
 		{
 			"matches": ["*://*.youtube.com/*"],
-			"js": ["support/core.js", "companions/youtube-skip-ads.js"]
+			"js": ["js/sites/youtube.com.js"]
 		}
 	]
 }
