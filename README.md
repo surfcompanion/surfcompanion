@@ -5,8 +5,8 @@ Chrome*sh* extension that adds some custom tailored sugar on the web. ( it's not
 ### Features
 
  * Auto skip Youtube ads
+ * Remove Instagram login modal if not logged. ( Instagram has a IP level block after some tries but this will try its best until it can )
 
 ### Planned
 
- * Remove Instagram login modal if not logged.
  * ¯\\_(ツ)_/¯
