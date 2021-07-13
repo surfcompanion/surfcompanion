@@ -4,7 +4,7 @@ export default companion("Youtube ad skipper", function () {
 	/**
 	 *
 	 */
-	function check_player() {
+	function check() {
 		document.querySelectorAll("#player-container-outer").forEach((container) => {
 			let video = container.querySelector("video") as HTMLVideoElement;
 			let ad_progress_bar = container.querySelector(".ytp-ad-persistent-progress-bar-container") as HTMLDivElement;
@@ -35,7 +35,5 @@ export default companion("Youtube ad skipper", function () {
 	/**
 	 *
 	 */
-	setInterval(function () {
-		check_player();
-	}, 420);
+	setInterval(() => check(), 420);
 });
