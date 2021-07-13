@@ -9,4 +9,4 @@ Chrome*sh* extension that adds some custom tailored sugar on the web. ( it's not
 ### Planned
 
  * Remove Instagram login modal if not logged.
- * ¯\_(ツ)_/¯
+ * ¯\\_(ツ)_/¯
