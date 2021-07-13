@@ -4,7 +4,8 @@ function companion(name, companion) {
 	if (typeof companion == "function") {
 		console.log(`Companion ${name} executed`);
 		companion();
+		return;
 	}
 
-	throw new Error(`Unknow companion type.`);
+	throw new Error(`Unknow companion type "${typeof companion}"`);
 }

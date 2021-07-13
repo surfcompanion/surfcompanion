@@ -5,16 +5,27 @@ companion("Youtube ad skipper", function () {
 	function check_player() {
 		document.querySelectorAll("#player-container-outer").forEach((container) => {
 			let video = container.querySelector("video");
-			let ad_bar = container.querySelector(".ytp-ad-persistent-progress-bar-container");
+			let ad_progress_bar = container.querySelector(".ytp-ad-persistent-progress-bar-container");
+			let ad_skip_button = container.querySelector(".ytp-ad-skip-button");
 
-			if (!(ad_bar && video)) return;
+			if (!(ad_progress_bar && video)) return;
 
-			if (RegExp(/none/i).test(ad_bar.style.display)) return;
+			if (RegExp(/none/i).test(ad_progress_bar.style.display)) return;
 
 			if (video.currentTime < video.duration - 0.5) {
-				console.log("Skipped AD");
 				video.playbackRate = 10;
 				video.currentTime = video.duration - 0.4;
+			}
+
+			if (ad_skip_button) {
+				ad_skip_button.dispatchEvent(
+					new MouseEvent("click", {
+						bubbles: true,
+						cancelable: true,
+						clientX: 0,
+						clientY: 0,
+					})
+				);
 			}
 		});
 	}
@@ -24,5 +35,5 @@ companion("Youtube ad skipper", function () {
 	 */
 	setInterval(function () {
 		check_player();
-	}, 500);
+	}, 420);
 });
