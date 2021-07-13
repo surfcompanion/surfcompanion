@@ -1,12 +1,14 @@
-companion("Youtube ad skipper", function () {
+import { companion } from "../support/core";
+
+export default companion("Youtube ad skipper", function () {
 	/**
 	 *
 	 */
 	function check_player() {
 		document.querySelectorAll("#player-container-outer").forEach((container) => {
-			let video = container.querySelector("video");
-			let ad_progress_bar = container.querySelector(".ytp-ad-persistent-progress-bar-container");
-			let ad_skip_button = container.querySelector(".ytp-ad-skip-button");
+			let video = container.querySelector("video") as HTMLVideoElement;
+			let ad_progress_bar = container.querySelector(".ytp-ad-persistent-progress-bar-container") as HTMLDivElement;
+			let ad_skip_button = container.querySelector(".ytp-ad-skip-button") as HTMLDivElement;
 
 			if (!(ad_progress_bar && video)) return;
 
