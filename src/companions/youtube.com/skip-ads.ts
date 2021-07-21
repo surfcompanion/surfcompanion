@@ -1,11 +1,11 @@
-import { companion } from "../support/core";
+import { companion } from "../../support/core";
 
 export default companion("Youtube ad skipper", function () {
 	/**
 	 *
 	 */
 	function check() {
-		document.querySelectorAll("#player-container-outer").forEach((container) => {
+		document.querySelectorAll("#player-container-outer,#player-theater-container").forEach((container) => {
 			let video = container.querySelector("video") as HTMLVideoElement;
 			let ad_progress_bar = container.querySelector(".ytp-ad-persistent-progress-bar-container") as HTMLDivElement;
 			let ad_skip_button = container.querySelector(".ytp-ad-skip-button") as HTMLDivElement;

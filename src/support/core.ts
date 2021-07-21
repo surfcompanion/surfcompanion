@@ -1,10 +1,10 @@
 /**
- * 
- * @param name 
- * @param companion 
- * @returns 
+ *
+ * @param name
+ * @param companion
+ * @returns
  */
-export function companion(name: string, companion: any) {
+export function companion(name: string, companion: any): void {
 	console.log(`Companion ${name} added`);
 
 	if (typeof companion == "function") {
