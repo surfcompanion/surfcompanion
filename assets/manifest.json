@@ -5,11 +5,11 @@
 	"background": {
 		"scripts": ["js/backgrounds/hot-reload.js"]
 	},
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": ["activeTab"],
 	"content_scripts": [
-		{
-			"matches": ["*://*.instagram.com/*"],
-			"js": ["js/sites/instagram.com.js"]
-		},
 		{
 			"matches": ["*://*.youtube.com/*"],
 			"js": ["js/sites/youtube.com.js"]
