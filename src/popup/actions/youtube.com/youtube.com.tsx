@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Component } from "react";
 import ActionContext from "../../common/action_context";
+import { ThemeContext, useTheme } from "../../common/theme";
 
 const YT_URL_REGEX = /^https?\:\/\/(www\.)?youtube\.com/i;
 const YT_VIDEO_REGEXES = [
@@ -25,19 +26,19 @@ export default class YoutubeActions extends Component<YoutubeActionsProps> {
 		return (
 			<div>
 				<h2>Youtube</h2>
-				<DownloadVideo cx={this.props.cx}></DownloadVideo>
+				<DownloadVideoAction cx={this.props.cx}></DownloadVideoAction>
 			</div>
 		);
 	}
 }
 
-const DownloadVideo = (props: YoutubeActionsProps) => {
+const DownloadVideoAction = (props: YoutubeActionsProps) => {
+	const theme = useTheme();
 	const active = !!YT_VIDEO_REGEXES.find((r) => r.test(props.cx.url));
-	const class_name = "button is-small is-fullwidth is-fullwidth " + (active ? "is-light is-link" : "button is-static");
 	const download_url = `https://yt1s.com/en?q=${encodeURI(props.cx.url)}`;
 
 	return (
-		<a className={class_name} target="_blank" href={download_url}>
+		<a className={theme.button_class(active)} target="_blank" href={download_url}>
 			[download]
 		</a>
 	);

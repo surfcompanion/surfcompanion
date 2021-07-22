@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Component } from "react";
 import YoutubeActions from "./actions/youtube.com/youtube.com";
 import ActionContext from "./common/action_context";
+import { ThemeContext } from "./common/theme";
 
 export default function App() {
 	const [current_url, set_current_url] = useState<string>("");
