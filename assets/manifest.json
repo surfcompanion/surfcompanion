@@ -13,6 +13,10 @@
 		{
 			"matches": ["*://*.youtube.com/*"],
 			"js": ["js/sites/youtube.com.js"]
+		},
+		{
+			"matches": ["*://*.whatsapp.com/*"],
+			"js": ["js/vendor.js", "js/sites/whatsapp.com.js"]
 		}
 	]
 }

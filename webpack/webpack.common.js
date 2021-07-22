@@ -8,6 +8,7 @@ module.exports = {
 		popup: path.join(srcDir, "popup/main.tsx"),
 		"backgrounds/hot-reload": path.join(srcDir, "backgrounds/hot-reload.js"),
 		"sites/youtube.com": path.join(srcDir, "sites/youtube.com.ts"),
+		"sites/whatsapp.com": path.join(srcDir, "sites/whatsapp.com.ts"),
 		//   options: path.join(srcDir, 'options.tsx'),
 		//   background: path.join(srcDir, 'background.ts'),
 	},
