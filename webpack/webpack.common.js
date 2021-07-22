@@ -5,7 +5,7 @@ const srcDir = path.join(__dirname, "..", "src");
 
 module.exports = {
 	entry: {
-		"popup" : path.join(srcDir, "popup/main.tsx"),
+		popup: path.join(srcDir, "popup/main.tsx"),
 		"backgrounds/hot-reload": path.join(srcDir, "backgrounds/hot-reload.js"),
 		"sites/youtube.com": path.join(srcDir, "sites/youtube.com.ts"),
 		//   options: path.join(srcDir, 'options.tsx'),
@@ -26,7 +26,15 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				use: "ts-loader",
-				exclude: /node_modules/,
+				exclude: [/node_modules/, /\.scss$/],
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				use: [
+					"style-loader",
+					"css-loader",
+					"sass-loader",
+				],
 			},
 		],
 	},
