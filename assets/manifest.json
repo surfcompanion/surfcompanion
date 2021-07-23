@@ -15,6 +15,10 @@
 			"js": ["js/sites/youtube.com.js"]
 		},
 		{
+			"matches": ["*://*.rarbgmirror.org/*"],
+			"js": ["js/sites/rarbg.com.js"]
+		},
+		{
 			"matches": ["*://*.whatsapp.com/*"],
 			"js": ["js/vendor.js", "js/sites/whatsapp.com.js"]
 		}

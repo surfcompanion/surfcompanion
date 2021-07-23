@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Component } from "react";
-import YoutubeActions from "./actions/youtube.com/youtube.com";
+import YoutubeActions from "./actions/youtube.com/YoutubeActions";
 import ActionContext from "./common/action_context";
-import { ThemeContext } from "./common/theme";
 
 export default function App() {
 	const [current_url, set_current_url] = useState<string>("");
@@ -18,7 +16,7 @@ export default function App() {
 	const action_context = new ActionContext();
 	action_context.url = current_url;
 
-	const components: JSX.Element[] = [<YoutubeActions cx={action_context} />].filter((c) => !!c);
+	const components: JSX.Element[] = [<YoutubeActions cx={action_context} />];
 
 	return (
 		<div>
